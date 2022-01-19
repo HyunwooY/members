@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jhta.practice.mybatis.MembersMapper">
+	<insert id="insert" parameterType="com.jhta.practice.vo.MembersVo">
+		insert into members values(members_seq.nextval,#{name},#{phone},#{addr},sysdate)
+	</insert>
+	<select id="selectAll" resultType="com.jhta.practice.vo.MembersVo">
+		select * from members
+	</select>
+</mapper>
